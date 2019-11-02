@@ -16,6 +16,17 @@ module.exports = {
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
     },
+    findOneAndUpdate: function (req, res) {
+        db.Movie.findOneAndUpdate ({id: req.params.id}, {$set : {watched: true}}, (err, data) => {
+            if (err) return res.send(500, { error: err});
+            // const response = {
+                // message: "Updated: " + req.params.id,
+                // watched: true,
+            // }
+            return res.status(200).send('it is done');
+        })
+
+    },
     delete: function (req, res) {
         db.Movie
         .findByIdAndRemove(req.params.id, (err, data) => {

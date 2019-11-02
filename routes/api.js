@@ -28,10 +28,11 @@ mongoose.connect(
 router.route("/movie/")
   .get(movieController.findAll)
   .post(movieController.create)
-
-
-router.route("/movie/:id")
+  
+  
+  router.route("/movie/:id")
   .delete(movieController.delete)
+  .put(movieController.findOneAndUpdate)
 
 router.get('/movie/:name', function (req, res, next) {
   let url = "https://www.omdbapi.com/?t=" + req.params.name + "&plot=short&apikey=trilogy"
@@ -43,10 +44,5 @@ router.get('/movie/:name', function (req, res, next) {
       res.json(response.data);
     })
 });
-
-// router.post('/movie/', function (req, res, next) {
-//   console.log(req.body)
-//   res.json(req.body)
-// });
 
 module.exports = router;

@@ -11,6 +11,12 @@ export default {
   saveTitle: function(movie) {
     return axios.post("/api/movie/", movie);
   },
+  // watchTitle: function(movie) {
+  //   return axios.post("/api/movie/", movie);
+  // },
+  updateTitle: function(id) {
+    return axios.put("api/movies/" + id);
+  },
   deleteTitle: function(movie) {
     console.log(movie)
     return axios.delete("/api/movie/" + movie, movie);

@@ -46,7 +46,8 @@ class Movies extends Component {
         let info = {
             "title": this.state.movie.Title,
             "description": this.state.movie.Plot,
-            "poster": this.state.movie.Poster
+            "poster": this.state.movie.Poster,
+            // "watched": true,
         }
         API.saveTitle(info)
             .then(res => {
@@ -57,6 +58,25 @@ class Movies extends Component {
                 console.log(err)
             })
     }
+
+    watchedMovie = event => {
+        event.preventDefault();
+        let info = {
+            "title": this.state.movie.Title,
+            "description": this.state.movie.Plot,
+            "poster": this.state.movie.Poster,
+            "watched": true,
+        }
+        API.updateTitle(info)
+            .then(res => {
+                    this.setState({ movie: [], showCard: false })
+                }
+            )
+            .catch(err => {
+                console.log(err)
+            })
+    }
+
     render() {
 
         return (

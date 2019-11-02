@@ -22,7 +22,12 @@ var MovieSchema = new Schema({
     date: {
         type: Date,
         default: Date.now
-    }
+    },
+    watched: {
+        type: Boolean,
+        default: false
+    },
+
 });
 
 var Movie = mongoose.model("Movie", MovieSchema);

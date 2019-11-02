@@ -1,6 +1,6 @@
 import React from "react";
 
-export function Card({ visible, title, plot, image, save,actionButton = true,id = "x",index = 0}) {
+export function Card({ visible, title, plot, image, save,actionButton = true,watched,markWatched,id = "x",index = 0}) {
     if (visible) {
         if (image === "N/A") {
             image = "https://picsum.photos/200/300"
@@ -11,6 +11,9 @@ export function Card({ visible, title, plot, image, save,actionButton = true,id 
         }else {
             buttonA = <a href="/api/delete" className="btn btn-danger" onClick={save} id={id} data-index={index}>Delete</a>
         }
+
+        let buttonB = <a href="/api/save" className={watched ? "btn btn-success":"btn btn-secondary"} onClick={()=> markWatched(id)}>Watched</a>
+    
         return (
             <div className="card mb-3">
                 <div className="row no-gutters">
@@ -22,6 +25,7 @@ export function Card({ visible, title, plot, image, save,actionButton = true,id 
                             <h5 className="card-title">{title}</h5>
                             <p className="card-text">{plot}</p>
                             {buttonA}
+                            {buttonB}
                         </div>
                     </div>
                 </div>

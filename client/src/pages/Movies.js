@@ -23,6 +23,7 @@ class Movies extends Component {
                     title: "",
                     description: "",
                     stars: ""
+            
                 })
             )
             .catch(err => console.log(err));
@@ -46,6 +47,25 @@ class Movies extends Component {
             .catch(err => console.log(err));
     }
 
+
+    markWatched = id => {
+        // let info = {
+        //     "title": this.state.movie.Title,
+        //     "description": this.state.movie.Plot,
+        //     "poster": this.state.movie.Poster
+        // }
+        API.updateTitle(id)
+            .then(res => {
+                    // this.setState({ movie: [], showCard: false })
+                    console.log("happy")
+                }
+            )
+            .catch(err => {
+                console.log(err)
+            })
+    }
+
+
     render() {
         return (
             <Container fluid>
@@ -64,7 +84,11 @@ class Movies extends Component {
                                             image={movie.poster}
                                             plot={movie.description}
                                             save={this.deleteMovie}
+                                            watched={movie.watched}
+                                            save={this.watchMovie}
                                             actionButton={false}
+                                            watchButton={false}
+                                            markWatched={this.markWatched}
                                         />
                                     </div>
                                 )
