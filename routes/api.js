@@ -13,8 +13,15 @@ const movieController = require("../controllers/movieController");
 // use mongoose
 var mongoose = require('mongoose');
 //Set up default mongoose connection
-var mongoDB = `mongodb://${process.env.user}:${process.env.password}@${process.env.host}/${process.env.db}`;
-mongoose.connect((process.env.DATABASE_URL || mongoDB), { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true });
+// var mongoDB = `mongodb://${process.env.user}:${process.env.password}@${process.env.host}/${process.env.db}`;
+// mongoose.connect((process.env.DATABASE_URL || mongoDB), { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true });
+mongoose.connect(
+  process.env.MONGODB_URI || "mongodb://localhost/3001",
+  {
+    useCreateIndex: true,
+    useNewUrlParser: true
+  }
+);
 
 
 // Matches with "/api/books"
@@ -27,7 +34,7 @@ router.route("/movie/:id")
   .delete(movieController.delete)
 
 router.get('/movie/:name', function (req, res, next) {
-  let url = "https://www.omdbapi.com/?t=" + req.params.name + "&plot=short&apikey=" + process.env.omdbKey
+  let url = "https://www.omdbapi.com/?t=" + req.params.name + "&plot=short&apikey=trilogy"
   console.log(url)
   // Make a request
   axios.get(url)

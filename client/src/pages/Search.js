@@ -77,7 +77,7 @@ class Movies extends Component {
                 </Row>
                 <Row>
                     <Col size="col-md-6 offset-md-3">
-                        <h1>Movie:</h1>
+                        <h1></h1>
                         <Card
                             visible={this.state.showCard}
                             key={this.state.movie.Title}
