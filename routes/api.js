@@ -31,8 +31,8 @@ router.route("/movie/")
   
   
   router.route("/movie/:id")
-  .delete(movieController.delete)
   .put(movieController.findOneAndUpdate)
+  .delete(movieController.delete)
 
 router.get('/movie/:name', function (req, res, next) {
   let url = "https://www.omdbapi.com/?t=" + req.params.name + "&plot=short&apikey=trilogy"

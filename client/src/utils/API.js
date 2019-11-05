@@ -15,7 +15,7 @@ export default {
   //   return axios.post("/api/movie/", movie);
   // },
   updateTitle: function(id) {
-    return axios.put("api/movies/" + id);
+    return axios.put("/api/movie/" + id);
   },
   deleteTitle: function(movie) {
     console.log(movie)

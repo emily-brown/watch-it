@@ -31,39 +31,31 @@ class Movies extends Component {
 
     deleteMovie = event => {
         event.preventDefault()
-        console.log(event.target.dataset.index)
-        let indexUsed = event.target.dataset.index
-        
-        
-       console.log(this.state.movies) 
+        // console.log(event.target.dataset.index)
+        let indexUsed = event.target.dataset.index;
+
         API.deleteTitle(event.target.id)
         .then(res => {
             this.state.movies.splice(indexUsed,1)
 
             this.setState({
                 movies: this.state.movies
-            })
+            });
         })
             .catch(err => console.log(err));
     }
 
 
-    markWatched = id => {
-        // let info = {
-        //     "title": this.state.movie.Title,
-        //     "description": this.state.movie.Plot,
-        //     "poster": this.state.movie.Poster
-        // }
+    markWatched = (event, id) => {
+        event.preventDefault();
         API.updateTitle(id)
             .then(res => {
-                    // this.setState({ movie: [], showCard: false })
-                    console.log("happy")
-                }
-            )
+                this.loadMovies();
+            })
             .catch(err => {
                 console.log(err)
             })
-    }
+    };
 
 
     render() {
@@ -89,9 +81,10 @@ class Movies extends Component {
                                             actionButton={false}
                                             watchButton={false}
                                             markWatched={this.markWatched}
+                                            deleteMovie={this.deleteMovie}
                                         />
                                     </div>
-                                )
+                                );
                             })
                             }
                         </Row>
