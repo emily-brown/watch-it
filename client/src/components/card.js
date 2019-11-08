@@ -35,18 +35,18 @@ export function Card({ visible, title, plot, image, save,actionButton = true,wat
         if(actionButton){
            buttonA = <Fab href="/api/save" color="secondary" aria-label="add" className={classes.margin} onClick={save}><Icon>add_circle</Icon></Fab>
         }else {
-            buttonA = (<a href="/api/delete" className="btn btn-danger" onClick={e => deleteMovie(e, id)} id={id} data-index={index}><Icon>delete</Icon></a>) 
+            buttonA = (<Fab href="/api/delete" className={classes.margin} onClick={e => deleteMovie(e, id)} id={id} data-index={index}><Icon>delete</Icon></Fab>) 
             console.log("delete");
             
             buttonB = (
-                <a
+                <Fab
                     href="/movies"
                     className={watched ? 'btn btn-success' : 'btn btn-secondary'}
                     
                     onClick={e => markWatched(e, id)}
                 >
                     <Icon>stars</Icon>
-                </a>
+                </Fab>
                 
             );
             
