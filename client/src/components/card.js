@@ -49,7 +49,7 @@ export function Card({ visible, title, plot, image, save,actionButton = true,wat
                 </Fab>
                 
             );
-            
+            console.log("test");
 
         }
 
