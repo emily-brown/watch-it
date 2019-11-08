@@ -4,6 +4,12 @@ import Button from "@material-ui/core/Button";
 import Fab from '@material-ui/core/Fab';
 import IconButton from '@material-ui/core/IconButton';
 import Icon from '@material-ui/core/Icon';
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import Typography from '@material-ui/core/Typography';
 
 // import HUE from '@material-ui/core/colors/HUE';
 // import AddIcon from '@material-ui/icons/Add';
@@ -18,13 +24,23 @@ const useStyles = makeStyles(theme => ({
     extendedIcon: {
       marginRight: theme.spacing(1),
     },
+    card: {
+        width: "90vw",
+        maxWidth: 480,
+        background: "#f9f8f4",
+        margin: 15,
+        display: "inline-block",
+        verticalAlign: "top",
+        textAlign: "left",
+    },
+
   }));
 
 // const color1 = blue[500];
 // const color2 = green[500];
 
 
-export function Card({ visible, title, plot, image, save,actionButton = true,watched,deleteMovie,markWatched,id,index = 0}) {
+export function MovieCard({ visible, title, plot, image, save,actionButton = true,watched,deleteMovie,markWatched,id,index = 0}) {
     const classes = useStyles();
     if (visible) {
         if (image === "N/A") {
@@ -49,14 +65,13 @@ export function Card({ visible, title, plot, image, save,actionButton = true,wat
                 </Fab>
                 
             );
-            console.log("test");
 
         }
 
         // let buttonB = <a href="/api/save" className={watched ? "btn btn-success":"btn btn-secondary"} onClick={()=> markWatched(id)}>Watched</a>
     
         return (
-            <div className="card mb-3">
+            <Card className={classes.card}>
                 <div className="row no-gutters">
                     <div className="col-md-4">
                         <img src={image} className="card-img img-fluid" alt={title} />
@@ -70,7 +85,7 @@ export function Card({ visible, title, plot, image, save,actionButton = true,wat
                         </div>
                     </div>
                 </div>
-            </div>
+            </Card>
         )
     } else {
         return (<>Whoops!</>)

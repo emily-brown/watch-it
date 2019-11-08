@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import API from "../utils/API";
 import { Col, Row, Container } from "../components/grid";
-import { Card } from "../components/card";
+import { MovieCard } from "../components/card";
 
 class Movies extends Component {
     state = {
@@ -66,7 +66,7 @@ class Movies extends Component {
                             {this.state.movies.map((movie, index) => {
                                 return (
                                     <div key={index} id={"card-" + movie._id} className="col-md-4">
-                                        <Card
+                                        <MovieCard
                                             visible={true}
                                             key={index}
                                             index={index}
