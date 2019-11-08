@@ -57,7 +57,8 @@ class Movies extends Component {
             .catch(err => {
                 console.log(err)
             })
-    }
+    };
+
 
     watchedMovie = event => {
         event.preventDefault();

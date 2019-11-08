@@ -1,6 +1,31 @@
 import React from "react";
+import { makeStyles } from '@material-ui/core/styles';
+import Button from "@material-ui/core/Button";
+import Fab from '@material-ui/core/Fab';
+import IconButton from '@material-ui/core/IconButton';
+import Icon from '@material-ui/core/Icon';
+
+// import HUE from '@material-ui/core/colors/HUE';
+// import AddIcon from '@material-ui/icons/Add';
+// import { Icon } from '@material-ui/core/Icon';
+// import DeleteIcon from '@material-ui/icons/Delete';
+
+
+const useStyles = makeStyles(theme => ({
+    margin: {
+      margin: theme.spacing(1),
+    },
+    extendedIcon: {
+      marginRight: theme.spacing(1),
+    },
+  }));
+
+// const color1 = blue[500];
+// const color2 = green[500];
+
 
 export function Card({ visible, title, plot, image, save,actionButton = true,watched,deleteMovie,markWatched,id,index = 0}) {
+    const classes = useStyles();
     if (visible) {
         if (image === "N/A") {
             image = "https://picsum.photos/200/300"
@@ -8,17 +33,19 @@ export function Card({ visible, title, plot, image, save,actionButton = true,wat
         let buttonA = "";
         let buttonB = "";
         if(actionButton){
-            buttonA = <a href="/api/save" className="btn btn-primary" onClick={save}>Save</a>
+           buttonA = <Fab href="/api/save" color="secondary" aria-label="add" className={classes.margin} onClick={save}><Icon>add_circle</Icon></Fab>
         }else {
-            buttonA = ( <a href="/api/delete" className="btn btn-danger" onClick={deleteMovie} id={id} data-index={index}>Delete</a>);
+            buttonA = (<a href="/api/delete" className="btn btn-danger" onClick={e => deleteMovie(e, id)} id={id} data-index={index}><Icon>delete</Icon></a>) 
+            console.log("delete");
             
             buttonB = (
                 <a
                     href="/movies"
                     className={watched ? 'btn btn-success' : 'btn btn-secondary'}
+                    
                     onClick={e => markWatched(e, id)}
                 >
-                    Watched
+                    <Icon>stars</Icon>
                 </a>
                 
             );

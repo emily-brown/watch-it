@@ -29,14 +29,13 @@ class Movies extends Component {
             .catch(err => console.log(err));
     };
 
-    deleteMovie = event => {
+    deleteMovie = (event, id) => {
         event.preventDefault()
-        // console.log(event.target.dataset.index)
         let indexUsed = event.target.dataset.index;
 
-        API.deleteTitle(event.target.id)
+        API.deleteTitle(id)
         .then(res => {
-            this.state.movies.splice(indexUsed,1)
+            this.state.movies.splice(indexUsed,1);
 
             this.setState({
                 movies: this.state.movies
