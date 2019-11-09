@@ -1,0 +1,9 @@
+body{
+    background-image: url("cinema.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    border-image-repeat: no-repeat;
+
+}
