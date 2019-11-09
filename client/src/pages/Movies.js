@@ -3,6 +3,7 @@ import API from "../utils/API";
 import { Col, Row, Container } from "../components/grid";
 import { MovieCard } from "../components/card";
 
+
 class Movies extends Component {
     state = {
         movies: [],

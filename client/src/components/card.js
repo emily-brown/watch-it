@@ -88,6 +88,6 @@ export function MovieCard({ visible, title, plot, image, save,actionButton = tru
             </Card>
         )
     } else {
-        return (<>Whoops!</>)
+        return (<></>)
     }
 }

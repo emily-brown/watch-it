@@ -9,4 +9,15 @@
 #title {
     font-family: 'Abril Fatface', cursive;
     font-size: 8rem;
+    /* color: black; */
+}
+
+#subtext {
+    font-family: 'Abril Fatface', cursive;
+    /* color: darkgrey; */
+}
+
+#submit {
+    background-color: rgb(33,37,41);
+    border: none;
 }
