@@ -5,3 +5,8 @@
 /* .main-container {
     background-color: aqua;
 } */
+
+#title {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 8rem;
+}

@@ -84,8 +84,8 @@ class Movies extends Component {
         return (
             <main>
                 <div className="main-container">
-                    <div className="Title">
-                        <h1>Watch It</h1>
+                    <div className="text-center">
+                        <h1 id="title">Watch It</h1>
                         <h2>Keep track of the movies and shows that you want to watch and have already seen</h2>
 
 
