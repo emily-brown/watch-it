@@ -10,18 +10,20 @@
     font-family: 'Abril Fatface', Arial, Helvetica, sans-serif;
     font-size: 8rem;
     text-shadow: 2px 2px #f9bc50;
+    color: #41494d;
     /* color: black; */
 }
 
 #subtext {
     font-family: 'Abril Fatface', Arial, Helvetica, sans-serif;
-    /* text-shadow: 2px 2px #f9bc50; */
+    text-shadow: 1px 1px lightgray;
+    color: #f9bc50;
     /* color: black; */
     /* color: darkgrey; */
 }
 
 #submit {
-    background-color: rgb(33,37,41);
+    background-color: #41494d;
     border: none;
     align-content: center;
     box-shadow: 5px 5px 5px lightgrey;
@@ -40,7 +42,7 @@
 label {
     font-family: 'Abril Fatface', Arial, Helvetica, sans-serif; 
     font-size: 1.3rem;
-    text-shadow: 1.2px 1.2px black;
+    text-shadow: 1px 1px #41494d;
     letter-spacing: 1px;
     color: #f9bc50;
     

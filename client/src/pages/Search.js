@@ -86,7 +86,7 @@ class Movies extends Component {
             <main>
                 <div className="main-container">
                     <div>
-                        <h1 className="text-center" id="title">Watch It</h1>
+                        <h1 className="text-center" id="title">WATCH IT</h1>
                         <h2 className="text-center" id="subtext">Keep track of your must sees</h2>
 
                         <div className="row d-flex justify-content-center" id="form">
