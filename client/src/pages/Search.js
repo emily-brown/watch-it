@@ -3,7 +3,7 @@ import { Col, Row, Container } from "../components/grid";
 import { MovieCard } from "../components/card";
 import API from "../utils/API";
 import "./Search.css";
-import "../components/auth/registeration";
+
 
 
 class Movies extends Component {
