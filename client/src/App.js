@@ -1,6 +1,7 @@
 import React from 'react';
 import Nav from "./components/nav";
 import { BrowserRouter as Router, Route } from "react-router-dom";
+
 import './App.css';
 
 import SavedPage from './pages/Movies';
