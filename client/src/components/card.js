@@ -25,7 +25,8 @@ const useStyles = makeStyles(theme => ({
     card: {
         width: "90vw",
         maxWidth: 360,
-        background: "#f9f8f4",
+        background: "white",
+        border: "solid",
         margin: 15,
         display: "inline-block",
         verticalAlign: "top",
