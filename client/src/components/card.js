@@ -11,6 +11,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import "./card.css"
+import color from "@material-ui/core/colors/lightGreen";
 
 // import HUE from '@material-ui/core/colors/HUE';
 // import AddIcon from '@material-ui/icons/Add';
@@ -26,7 +27,7 @@ const useStyles = makeStyles(theme => ({
         width: "90vw",
         maxWidth: 360,
         background: "white",
-        border: "solid",
+        border: "solid #41494d",
         margin: 15,
         display: "inline-block",
         verticalAlign: "top",
@@ -56,7 +57,7 @@ export function MovieCard({ visible, title, plot, image, save,actionButton = tru
             buttonB = (
                 <a id="watchedbtn"
                     href="/movies"
-                    className={watched ? 'btn btn-success' : 'btn btn-secondary'}
+                    className={watched ? 'btn btn-warning' : 'btn btn-secondary'}
                     
                     onClick={e => markWatched(e, id)}
                 >
