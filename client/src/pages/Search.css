@@ -7,27 +7,41 @@
 } */
 
 #title {
-    font-family: 'Abril Fatface', cursive;
+    font-family: 'Abril Fatface', Arial, Helvetica, sans-serif;
     font-size: 8rem;
-    text-shadow: 2px 2px lightgrey;
+    text-shadow: 2px 2px #f9bc50;
     /* color: black; */
 }
 
 #subtext {
-    font-family: 'Abril Fatface', cursive;
-    text-shadow: 2px 2px lightgrey;
+    font-family: 'Abril Fatface', Arial, Helvetica, sans-serif;
+    /* text-shadow: 2px 2px #f9bc50; */
+    /* color: black; */
     /* color: darkgrey; */
 }
 
 #submit {
     background-color: rgb(33,37,41);
     border: none;
+    align-content: center;
+    box-shadow: 5px 5px 5px lightgrey;
+}
+
+#submit:hover {
+    background: #f9bc50;
+}
+
+#searchbtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 label {
-    font-family: 'Abril Fatface', cursive; 
+    font-family: 'Abril Fatface', Arial, Helvetica, sans-serif; 
     font-size: 1.3rem;
-    text-shadow: 1.2px 1.2px lightgrey;
+    text-shadow: 1.2px 1.2px black;
     letter-spacing: 1px;
+    color: #f9bc50;
     
 }
