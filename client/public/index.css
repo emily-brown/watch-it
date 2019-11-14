@@ -20,6 +20,7 @@ body{
 @media screen and (max-width: 640px) {
     body {
         background-image: none;
-        background-color: #f9bc50;
+        /* background-color: #f9bc50; */
+        background-color: antiquewhite;
     }
 }
