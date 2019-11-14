@@ -1,6 +1,6 @@
 # Watch It
 
-### Link to Live App: 
+### Link to Live App: https://watch--it.herokuapp.com/
 
 ## App Objective: 
 Keep track of the movies and shows you want to watch and already watched in one simple app. 
