@@ -10,6 +10,7 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
+import "./card.css"
 
 // import HUE from '@material-ui/core/colors/HUE';
 // import AddIcon from '@material-ui/icons/Add';
@@ -21,12 +22,9 @@ const useStyles = makeStyles(theme => ({
     margin: {
       margin: theme.spacing(1),
     },
-    extendedIcon: {
-      marginRight: theme.spacing(1),
-    },
     card: {
         width: "90vw",
-        maxWidth: 480,
+        maxWidth: 360,
         background: "#f9f8f4",
         margin: 15,
         display: "inline-block",
@@ -49,20 +47,20 @@ export function MovieCard({ visible, title, plot, image, save,actionButton = tru
         let buttonA = "";
         let buttonB = "";
         if(actionButton){
-           buttonA = <Fab href="/api/save" color="secondary" aria-label="add" className={classes.margin} onClick={save}><Icon>add_circle</Icon></Fab>
+           buttonA = <Fab href="/api/save" aria-label="add" className={classes.margin} onClick={save}><Icon>add_circle</Icon></Fab>
         }else {
             buttonA = (<Fab href="/api/delete" className={classes.margin} onClick={e => deleteMovie(e, id)} id={id} data-index={index}><Icon>delete</Icon></Fab>) 
             console.log("delete");
             
             buttonB = (
-                <Fab
+                <a id="watchedbtn"
                     href="/movies"
                     className={watched ? 'btn btn-success' : 'btn btn-secondary'}
                     
                     onClick={e => markWatched(e, id)}
                 >
                     <Icon>stars</Icon>
-                </Fab>
+                </a>
                 
             );
 
@@ -80,8 +78,10 @@ export function MovieCard({ visible, title, plot, image, save,actionButton = tru
                         <div className="card-body">
                             <h5 className="card-title">{title}</h5>
                             <p className="card-text">{plot}</p>
+                            <div className="buttons">
                             {buttonA}
                             {buttonB}
+                            </div>
                         </div>
                     </div>
                 </div>

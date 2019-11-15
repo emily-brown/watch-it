@@ -9,15 +9,25 @@
 #title {
     font-family: 'Abril Fatface', cursive;
     font-size: 8rem;
+    text-shadow: 2px 2px lightgrey;
     /* color: black; */
 }
 
 #subtext {
     font-family: 'Abril Fatface', cursive;
+    text-shadow: 2px 2px lightgrey;
     /* color: darkgrey; */
 }
 
 #submit {
     background-color: rgb(33,37,41);
     border: none;
+}
+
+label {
+    font-family: 'Abril Fatface', cursive; 
+    font-size: 1.3rem;
+    text-shadow: 1.2px 1.2px lightgrey;
+    letter-spacing: 1px;
+    
 }
