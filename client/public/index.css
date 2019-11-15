@@ -1,6 +1,6 @@
 
 body{
-    background-image: url("cinema.jpg");
+    background-image: url("https://res.cloudinary.com/defmozvyn/image/upload/v1573774211/cinema_1_lxpbsc.jpg");
     background-color: #ebe3db;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -10,16 +10,10 @@ body{
 
 }
 
-/* #overlay {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 0, 0, 0.2);
-    position: absolute;
-} */
-
 @media screen and (max-width: 640px) {
     body {
         background-image: none;
-        background-color: #ebe3db;
+        /* background-color: #f9bc50; */
+        background-color: antiquewhite;
     }
 }

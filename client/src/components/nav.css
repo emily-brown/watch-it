@@ -3,7 +3,7 @@
 }
 
 a {
-    color: black;
+    color: #41494d;
     font-family: 'Abril Fatface', cursive;
     /* text-decoration: none; */
     font-size: 1.2rem;
@@ -11,6 +11,13 @@ a {
 }
 
 a:hover {
-    color:#57536a;
+    color:#f9bc50;
     text-decoration: none;
+}
+
+#logo {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-left: 5%;
 }

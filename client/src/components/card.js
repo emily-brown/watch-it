@@ -1,21 +1,10 @@
 import React from "react";
 import { makeStyles } from '@material-ui/core/styles';
-import Button from "@material-ui/core/Button";
 import Fab from '@material-ui/core/Fab';
-import IconButton from '@material-ui/core/IconButton';
 import Icon from '@material-ui/core/Icon';
 import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import Typography from '@material-ui/core/Typography';
 import "./card.css"
 
-// import HUE from '@material-ui/core/colors/HUE';
-// import AddIcon from '@material-ui/icons/Add';
-// import { Icon } from '@material-ui/core/Icon';
-// import DeleteIcon from '@material-ui/icons/Delete';
 
 
 const useStyles = makeStyles(theme => ({
@@ -24,8 +13,9 @@ const useStyles = makeStyles(theme => ({
     },
     card: {
         width: "90vw",
-        maxWidth: 360,
-        background: "#f9f8f4",
+        maxWidth: "95%",
+        background: "white",
+        border: "solid #41494d",
         margin: 15,
         display: "inline-block",
         verticalAlign: "top",
@@ -33,9 +23,6 @@ const useStyles = makeStyles(theme => ({
     },
 
   }));
-
-// const color1 = blue[500];
-// const color2 = green[500];
 
 
 export function MovieCard({ visible, title, plot, image, save,actionButton = true,watched,deleteMovie,markWatched,id,index = 0}) {
@@ -55,7 +42,7 @@ export function MovieCard({ visible, title, plot, image, save,actionButton = tru
             buttonB = (
                 <a id="watchedbtn"
                     href="/movies"
-                    className={watched ? 'btn btn-success' : 'btn btn-secondary'}
+                    className={watched ? 'btn btn-warning' : 'btn btn-secondary'}
                     
                     onClick={e => markWatched(e, id)}
                 >
