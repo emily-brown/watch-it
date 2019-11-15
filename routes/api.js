@@ -35,7 +35,8 @@ router.route("/movie/")
   .delete(movieController.delete)
 
 router.get('/movie/:name', function (req, res, next) {
-  let url = "https://www.omdbapi.com/?t=" + req.params.name + "&plot=short&apikey=" + process.env.API_KEY
+  let url = "https://www.omdbapi.com/?t=" + req.params.name + "&plot=short&apikey=trilogy" 
+  // + process.env.API_KEY
   console.log(url)
   // Make a request
   axios.get(url)
