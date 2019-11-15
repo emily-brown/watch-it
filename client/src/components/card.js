@@ -42,14 +42,14 @@ export function MovieCard({ visible, title, plot, image, save,actionButton = tru
             buttonB = (
                 <a id="watchedbtn"
                     href="/movies"
-                    className={watched ? 'btn btn-warning' : 'btn btn-secondary'}
+                    className={watched ? 'btn-warning' : 'btn-secondary'}
                     
                     onClick={e => markWatched(e, id)}
                 >
                     <Icon>stars</Icon>
                 </a>
                 
-            );
+            ); 
 
         }
 
