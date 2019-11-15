@@ -1,6 +1,8 @@
 import React from "react";
-import "./home.scss";
 import { Login, Register } from "./components/auth/index";
+import { BrowserRouter as  Router, Route } from "react-router-dom";
+import "./home.scss";
+
 
 class App extends React.Component {
   constructor(props) {
@@ -29,6 +31,7 @@ class App extends React.Component {
   }
 
   render() {
+    const {getMeIn} = this.props;
     const { isLogginActive } = this.state;
     const current = isLogginActive ? "Register" : "Login";
     const currentActive = isLogginActive ? "login" : "register";
@@ -37,7 +40,7 @@ class App extends React.Component {
         <div className="login">
           <div className="container" ref={ref => (this.container = ref)}>
             {isLogginActive && (
-              <Login containerRef={ref => (this.current = ref)} />
+              <Login getMeIn={getMeIn} containerRef={ref => (this.current = ref)} />
             )}
             {!isLogginActive && (
               <Register containerRef={ref => (this.current = ref)} />
@@ -51,8 +54,10 @@ class App extends React.Component {
           />
         </div>
       </div>
+
     );
   }
+  
 }
 
 const RightSide = props => {
@@ -66,7 +71,8 @@ const RightSide = props => {
         <div className="text">{props.current}</div>
       </div>
     </div>
-  );
+  )
 };
+
 
 export default App;

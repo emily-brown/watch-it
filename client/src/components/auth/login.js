@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import React, { useState } from "react";
 
 
@@ -33,7 +33,7 @@ onPasswordChange(e) {
 }
 
 submitLogin(e) {
-
+this.props.getMeIn();
 if(this.state.username == ""){
  this.showValidationErr("username", "Username is required!");
 
@@ -45,7 +45,7 @@ if(this.state.username == ""){
   
 
   render() {
-
+    
     let usernameErr = null, passwordErr = null, emailErr = null;
 
     for(let err of this.state.errors) {
@@ -78,7 +78,7 @@ if(this.state.username == ""){
           </div>
         </div>
         <div className="footer">
-          <button disabled={!validateForm()} 
+          <button
           type="button"
           className="btn"
           onClick= 
