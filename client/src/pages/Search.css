@@ -1,25 +1,14 @@
-/* .Title {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-} */
-
-/* .main-container {
-    background-color: aqua;
-} */
-
 #title {
     font-family: 'Abril Fatface', Arial, Helvetica, sans-serif;
     font-size: 8rem;
     text-shadow: 2px 2px #f9bc50;
     color: #41494d;
-    /* color: black; */
 }
 
 #subtext {
     font-family: 'Abril Fatface', Arial, Helvetica, sans-serif;
     text-shadow: 1px 1px lightgray;
     color: #f9bc50;
-    /* color: black; */
-    /* color: darkgrey; */
 }
 
 #submit {
@@ -44,5 +33,4 @@ label {
     text-shadow: 1px 1px #41494d;
     letter-spacing: 1px;
     color: #f9bc50;
-    
 }

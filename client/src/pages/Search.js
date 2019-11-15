@@ -14,8 +14,6 @@ class Movies extends Component {
     };
 
     seeChanges = event => {
-        // Destructure the name and value properties off of event.target
-        // Update the appropriate state
         const { name, value } = event.target;
         this.setState({
             [name]: value
@@ -23,7 +21,6 @@ class Movies extends Component {
     };
 
     findMovie = event => {
-        // When the form is submitted, prevent its default behavior, get recipes update the recipes state
         event.preventDefault();
         API.getTitle(this.state.title)
             .then(res => {
