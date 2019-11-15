@@ -1,4 +1,5 @@
 import React from "react";
+import React, { useState } from "react";
 
 
 export class Login extends React.Component {
@@ -77,7 +78,7 @@ if(this.state.username == ""){
           </div>
         </div>
         <div className="footer">
-          <button 
+          <button disabled={!validateForm()} 
           type="button"
           className="btn"
           onClick= 
