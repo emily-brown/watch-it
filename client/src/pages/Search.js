@@ -24,6 +24,7 @@ class Movies extends Component {
         event.preventDefault();
         API.getTitle(this.state.title)
             .then(res => {
+                console.log(res)
                 if (res.data.Response === "True") {
                     this.setState({ movie: res.data, showCard: true })
                 } else {
